@@ -1,0 +1,105 @@
+﻿﻿@{
+    ViewData["Title"] = "Mensajes";
+    
+    var mensajes = ViewBag.Mensajes as IEnumerable<dynamic>;
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+<div class="text-center">
+
+    <div class="phone-simulator">
+        <div class="phone-header">Mensajes</div>
+        <div class="phone-body" id="mensajes-container">
+            @if (mensajes != null && mensajes.Any())
+            {
+                foreach (var mensaje in mensajes)
+                {
+                    <div class="message-bubble">
+                        <strong>@mensaje.Usuario:</strong> @mensaje.Mensaje
+                        <div class="message-time">@mensaje.Fecha</div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No hay mensajes aún.</p>
+            }
+        </div>
+
+        <div class="phone-footer">
+            <form asp-action="Enviar" method="post" class="message-form">
+                <input type="text" class="message-input" name="texto" placeholder="Escribe un mensaje..." required />
+                <button type="submit" class="send-button btn-trasparent btn-lg">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .message-form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .message-bubble {
+        font-family: 'Press Start 2P', sans-serif;
+        max-width: 80%;
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        text-align: left;
+        position: relative;
+    }
+
+        .message-bubble strong {
+            display: block;
+            font-size: 0.8em;
+            margin-bottom: 5px;
+        }
+
+    .message-time {
+        font-size: 0.5em;
+        color: gray;
+        margin-top: 5px;
+        text-align: right;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        function cargarMensajes() {
+            $.ajax({
+                url: '@Url.Action("ObtenerMensajes", "Mensajes")',
+                method: 'GET',
+                success: function (data) {
+                    $('#mensajes-container').empty();
+
+                    data.forEach(function (mensaje) {
+                        $('#mensajes-container').append(`
+                                <div class="message-bubble">
+                                    <strong>${mensaje.usuario || "Usuario desconocido"}:</strong>
+                                    ${mensaje.mensaje || "Mensaje no disponible"}
+                                    <div class="message-time">${mensaje.fecha || ""}</div>
+                                </div>
+                            `);
+                    });
+                },
+                error: function (error) {
+                    console.error('Error al cargar los mensajes:', error);
+                }
+            });
+        }
+
+        setInterval(cargarMensajes, 10000);
+        cargarMensajes();
+    });
+</script>

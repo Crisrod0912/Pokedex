@@ -1,0 +1,353 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+    margin: 0;
+    border: none; 
+    box-shadow: none; 
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2em; 
+    color: white !important; 
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000000d3 !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+    background-image: url('../img/pokeball.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.phone-simulator {
+    width: 400px;
+    height: 700px;
+    margin: 80px auto;
+    border: 5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.phone-header {
+    font-family: 'Press Start 2P', sans-serif;
+    height: 50px;
+    background-color: #cf001fe3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+}
+
+.phone-body {
+    font-family: 'Press Start 2P', sans-serif;
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    background-color: #000000e7;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+    .message.received {
+        background-color: #dededeee;
+        align-self: flex-start;
+        border: 3px solid black;
+    }
+
+    .message.sent {
+        background-color: #000000db;
+        color: white;
+        align-self: flex-end;
+        border: 3px solid black;
+    }
+
+.phone-footer {
+    font-family: 'Press Start 2P', sans-serif;
+    display: flex;
+    padding: 15px;
+    gap: 5px;
+    border-top: 1px solid black;
+    background-color: #cf001fe3;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+
+.message-input {
+    flex: 1;
+    height: 50px;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 20px;
+    font-size: 10px;
+    background-color: #dededeee;
+}
+
+.send-button {
+    background-color: #fed500;
+    height: 50px;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .send-button:hover {
+        background-color: #cf001fe3;
+    }
+
+.retos-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.entrenadores-list, .retos-pendientes {
+    width: 45%;
+    padding: 20px;
+    background-color: #000000d9;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 10px solid #3d6cb5;
+}
+
+    .entrenadores-list h2, .retos-pendientes h2 {
+        text-align: center;
+        color: #fed500;
+    }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+    li span {
+        text-align: left;
+        flex-grow: 1;
+        padding-right: 10px;
+    }
+
+    li button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        align-items: end;
+    }
+        
+        li button.enviar-reto {
+            background-color: #3d6cb5;
+            color: white;
+        }
+
+        li button.aceptar-reto {
+            background-color: #64bb76;
+            color: white;
+            align-items: end;
+        }
+
+        li button.rechazar-reto {
+            background-color: #ff7485;
+            color: white;
+        }
+
+.entrenador-container {
+    font-family: 'Press Start 2P', sans-serif;
+    max-width: 90%;
+    margin: 60px auto;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+}
+
+.tabla-entrenador{
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+}
+
+.tabla-entrenador tr:nth-child(even) {
+   background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.tabla-entrenadorth, .tabla-entrenador td {
+    padding: 10px;
+}
+
+.tabla-entrenador th {
+    background-color: rgba(255, 0, 0, 0.8); 
+    color: white;
+    text-transform: uppercase;
+}
+
+.title-entrenador {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 60px auto;
+    margin-bottom: 20px;
+}
+
+.equipo-container {
+    font-family: 'Press Start 2P', sans-serif;
+    max-width: 90%;
+    margin: 60px auto;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.tabla-equipo {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+}
+
+    .tabla-equipotr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .tabla-equipo th, .tabla-equipo td {
+        padding: 10px;
+    }
+
+    .tabla-equipo th {
+        background-color: rgba(255, 0, 0, 0.8);
+        color: white;
+        text-transform: uppercase;
+    }
+
+.title-equipo {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 60px auto;
+    margin-bottom: 20px;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+    margin: 20px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    margin: 20px;
+}
+
+.add-btn {
+    background-color: #2ecc71;
+    color: white;
+    margin: 20px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.equipo-list {
+    width: 45%;
+    padding: 20px;
+    background-color: #000000d9;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 10px solid #3d6cb5;
+}
+
+.equipo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.enfermeria-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.tabla-enfermeria thead {
+    background-color: #000000d9;
+    font-weight: bold;
+}
+
+.tabla-enfermeria th {
+    text-align: center;
+}
+
+.tabla-enfermeria td {
+    text-align: left;
+}

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Pokedex.Models.EntrenadoresModel>
+
+<h2 class="title-entrenador text-center">Entrenador Pokemón</h2>
+
+<div class="text-center">
+
+    <div class="entrenador-container">
+        <table class="tabla-entrenador">
+            <thead>
+                <tr>
+                    <th>Nombre Entrenador</th>
+                    <th>Nombre Equipo</th>
+                    <th>Nivel</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pokemon in Model)
+                {
+                    <tr>
+                        <td>@pokemon.NombreEntrenador</td>
+                        <td>@pokemon.NombreEquipo</td>
+                        <td>@pokemon.Nivel</td>
+                    </tr>
+                }
+            </tbody>
+       </table>
+    </div>
+
+</div>

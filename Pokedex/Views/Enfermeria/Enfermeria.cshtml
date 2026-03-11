@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Pokedex.Models.EnfermeriaModel>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Pokemon-Hollow&display=swap" rel="stylesheet" />
+
+<h2 class="title-enfermeria text-center">Enfermería</h2>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Mensaje"]
+    </div>
+}
+
+<div class="enfermeria-container">
+
+    <table class="tabla-enfermeria">
+        <thead>
+            <tr>
+                <th>Pokémon</th>
+                <th>Dueño</th>
+                <th>Padecimiento</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pokemon in Model)
+            {
+                <tr>
+                    <td>@pokemon.NombrePokemon</td>
+                    <td>@pokemon.NombreDuenno</td>
+                    <td>@pokemon.Padecimiento</td>
+                    <td>@pokemon.Estado</td>
+                    <td>
+                        <form asp-action="Curar" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@pokemon.AtencionID" />
+                            <button class="btn btn-curar">Curar</button>
+                        </form>
+                        <form asp-action="Eliminar" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@pokemon.AtencionID" />
+                            <button class="btn btn-eliminar">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<br />
+
+<a asp-action="Agregar" class="btn btn-addenfermeria">Agregar Pokémon</a>
+
+<style>
+    .title-enfermeria {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 2em;
+        color: white;
+        margin: 60px auto;
+        margin-bottom: 20px;
+    }
+
+    .enfermeria-container {
+        font-family: 'Press Start 2P', sans-serif;
+        max-width: 90%;
+        margin: 60px auto;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+    }
+
+    .tabla-enfermeria {
+        width: 100%;
+        border-collapse: collapse;
+        color: white;
+        text-align: center;
+    }
+
+        .tabla-enfermeria th, .tabla-enfermeria td {
+            padding: 10px;
+        }
+
+        .tabla-enfermeria th {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .tabla-enfermeria tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+    .btn {
+        font-family: 'Press Start 2P', sans-serif;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-addenfermeria {
+        background-color: rgba(208, 0, 0, 0.8);
+        color: white;
+        font-size: 14px;
+        display: inline-block;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+        .btn-addenfermeria:hover {
+            background-color: rgba(150, 0, 0, 0.9);
+        }
+
+    .btn-curar {
+        background-color: rgba(0, 128, 0, 0.8);
+        color: white;
+    }
+
+        .btn-curar:hover {
+            background-color: rgba(0, 100, 0, 0.9);
+        }
+
+    .btn-eliminar {
+        background-color: rgba(208, 0, 0, 0.8);
+        color: white;
+    }
+
+        .btn-eliminar:hover {
+            background-color: rgba(150, 0, 0, 0.9);
+        }
+</style>

@@ -1,0 +1,113 @@
+﻿@model Pokedex.Models.EnfermeriaModel
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Pokemon-Hollow&display=swap" rel="stylesheet" />
+
+<div class="enfermeria-container">
+
+    <h2 class="title-enfermeria text-center">Agregar Pokémon</h2>
+
+    <form asp-action="Agregar" asp-controller="Enfermeria" method="post" class="form-enfermeria">
+        <div class="form-group">
+            <label for="NombrePokemon">Nombre del Pokémon</label>
+            <input type="text" class="form-control" id="NombrePokemon" name="NombrePokemon" required />
+        </div>
+
+        <div class="form-group">
+            <label for="NombreDueño">Nombre del Dueño</label>
+            <input type="text" class="form-control" id="NombreDueno" name="NombreDueño" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Padecimiento">Padecimiento</label>
+            <input type="text" class="form-control" id="Padecimiento" name="Padecimiento" required />
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-guardar">Guardar</button>
+            <a asp-action="Enfermeria" asp-controller="Enfermeria" class="btn btn-cancelar">Cancelar</a>
+        </div>
+    </form>
+
+</div>
+
+<style>
+    .enfermeria-container {
+        font-family: 'Press Start 2P', sans-serif;
+        max-width: 90%;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.7); 
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .title-enfermeria {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 2em;
+        color: white; 
+        margin-bottom: 20px;
+    }
+
+    .form-enfermeria {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 14px;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .form-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        font-family: 'Press Start 2P', sans-serif;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-guardar {
+        background-color: rgba(208, 0, 0, 0.8);
+        color: white;
+    }
+
+        .btn-guardar:hover {
+            background-color: rgba(0, 100, 0, 0.9);
+        }
+
+    .btn-cancelar {
+        background-color: rgba(208, 0, 0, 0.8);
+        color: white;
+    }
+
+        .btn-cancelar:hover {
+            background-color: rgba(150, 0, 0, 0.9);
+        }
+</style>

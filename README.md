@@ -25,8 +25,8 @@ Web development has multiple applications for users. Due to the growth of the en
 
 ### 📋 Prerequisites
 
-- 🛢️ [MySQL](https://www.mysql.com/products/workbench/)
-- 💻 [VSCode](https://visualstudio.microsoft.com/es/downloads/)
+- 🛢️ [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- 💻 [Visual Studio 2022](https://visualstudio.microsoft.com/es/downloads/)
 
 ### 🔧 Setup
 

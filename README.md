@@ -1,4 +1,4 @@
-# 🐱‍👤 Pokedex
+# 🐱‍👤 Pokédex
 
 Web development has multiple applications for users. Due to the growth of the entertainment industry, there has been an increase in the number of customers in the video game sector. Because of this, there is a high demand for websites that display relevant information. Pokémon has been one of the most prominent video games in the industry, with Nintendo owning the franchise and positioning itself as one of the leading producers.
 

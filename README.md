@@ -52,8 +52,15 @@ Web development has multiple applications for users. Due to the growth of the en
 
     ```
 
+    Ensure the MySQL credentials and database name match your local setup.
+
 4. ▶️ Start the IIS Express Server:
 
     - Open the project on **Visual Studio 2022** and click on "IIS Express".
 
-5. 🌐 Access the project in your browser.
+5. 🌐 Access the Pokédex in your browser.
+
+> [!NOTE]
+> **Project Owner / Developer** 🧑🏻‍💻  
+>- Cristopher Rodríguez Fernández 
+***

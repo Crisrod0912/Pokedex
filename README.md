@@ -6,8 +6,8 @@ Web development has multiple applications for users. Due to the growth of the en
 
 - 🔒 **Authentication and Registration:** Users can create accounts and log in securely.
 - 👥 **User Roles:**
-    - 🏆 **Trainer:** Manages their Pokémon team, challenges other trainers, and communicates with them.
     - ⚙️ **Administrator:** Manages the Pokédex and system users.
+    - 🏆 **Trainer:** Manages their Pokémon team, challenges other trainers, and communicates with them.
     - 🩺 **Nurse:** Handles users' Pokémon care requests.
 - 📚 **Pokédex:** Interactive database with detailed information on each Pokémon.
 - 💬 **Messaging and Battle Challenges:** System for trainers to communicate and challenge each other in battles.

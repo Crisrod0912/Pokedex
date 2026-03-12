@@ -36,7 +36,7 @@ Web development has multiple applications for users. Due to the growth of the en
     git clone https://github.com/Crisrod0912/Pokedex.git
     ```
 
-2. 🗃️ Set up the Microsoft SQL Server database:
+2. 🗃️ Set up the MySQL database:
 
    - Open **MySQL Workbench**.
    - Create a new database called `pokedex`.

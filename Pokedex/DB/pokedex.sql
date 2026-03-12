@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `pokedex` /*!40100 DEFAULT CHARACTER SET utf8mb4 
 USE `pokedex`;
 -- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: localhost    Database: 
+-- Host: localhost    Database: pokedex
 -- ------------------------------------------------------
 -- Server version	9.5.0
 

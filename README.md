@@ -57,4 +57,3 @@ Web development has multiple applications for users. Due to the growth of the en
     - Open the project on **Visual Studio 2022** and click on "IIS Express".
 
 5. 🌐 Access the project in your browser.
-6. 

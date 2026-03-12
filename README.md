@@ -14,7 +14,7 @@ Web development has multiple applications for users. Due to the growth of the en
 
 ## 🛠️ Technologies Used
 
-- 🎨 **Frontend**: CSS, HTML, JavaScript, SCSS
+- 🎨 **Frontend**: CSS, HTML, JavaScript
 - 💻 **Backend**: C#
 - 🧱 **Frameworks**: ASP.Net Core, Bootstrap
 - 🗄️ **Database**: MySQL

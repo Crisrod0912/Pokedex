@@ -14,12 +14,12 @@ Web development has multiple applications for users. Due to the growth of the en
 
 ## 🛠️ Technologies Used
 
-- 🎨 **Frontend**: CSS, HTML, Javascript
-- 💻 **Backend**: C#
-- 🧱 **Frameworks**: ASP.Net Core, Bootstrap
-- 🗄️ **Database**: MySQL
-- 🌐 **Server**: IIS Express
-- 🔂 **Version Control**: Git
+- 🎨 **Frontend:** CSS, HTML, Javascript
+- 💻 **Backend:** C#
+- 🧱 **Frameworks:** ASP.Net Core, Bootstrap
+- 🗄️ **Database:** MySQL
+- 🌐 **Server:** IIS Express
+- 🔂 **Version Control:** Git
 
 ## ⚙️ Installation
 
@@ -61,6 +61,6 @@ Web development has multiple applications for users. Due to the growth of the en
 5. 🌐 Access the Pokédex in your browser.
 
 > [!NOTE]
-> **Project Owner / Developer** 🧑🏻‍💻  
+> **Project Owner / Developer** 👨🏻‍💻  
 >- Cristopher Rodríguez Fernández 
 ***
